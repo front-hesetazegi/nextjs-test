@@ -27,13 +27,14 @@ const Link: FC<LinkProps> = ({ variant, label, link }) => {
     simpleBlack: "text-black",
     simpleWhite: "text-white",
     simpleGreen: "text-green",
-    green: "bg-green-500 text-black",
-    green2: "bg-green-700 text-white",
-    black: "bg-black text-black",
-    black2: "bg-gray-800 text-black",
-    white: "bg-white text-white",
-    white2: "bg-gray-200 text-white",
+    green: "text-black",
+    green2: "text-white",
+    black: "text-black",
+    black2: "text-black",
+    white: "text-white",
+    white2: "text-white",
   };
+
   const linkClass = variantClasses[variant] || "text-black";
 
   const src = ["white", "black", "simpleGreen"].includes(variant)
@@ -58,7 +59,7 @@ const Link: FC<LinkProps> = ({ variant, label, link }) => {
         className={
           variant.includes("simple")
             ? ""
-            : `w-[41px] h-[41px] rounded-full ${imageBg}`
+            : `w-[41px] h-[41px] rounded-full ${imageBg} justify-center flex items-center`
         }
       >
         <Image src={src} alt="arrow icon" />

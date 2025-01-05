@@ -1,10 +1,16 @@
+import Header from "@/layouts/Header";
+import HeroLayout from "@/layouts/Hero";
+import ServicesLayout from "@/layouts/Services";
+
 export default function Home() {
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse
-      animi nostrum consequuntur quaerat! Eligendi magni eum laborum expedita in
-      debitis fugiat, voluptatem corporis, iure ullam tempore. Labore,
-      praesentium officia?
+    <div className="p-16 flex flex-col gap-24">
+      <Header />
+      <HeroLayout />
+      <ServicesLayout />
+      {/* 
+      <UseCases />
+      <Footer /> */}
     </div>
   );
 }
