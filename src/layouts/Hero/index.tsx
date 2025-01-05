@@ -8,7 +8,7 @@ import ZoomLogo from "@/../public/image/zoom-logo.svg";
 import Button from "@/components/Button";
 import Image from "next/image";
 
-export default function Hero() {
+export default function HeroLayout() {
   return (
     <section>
       <div className="flex justify-between items-start mb-[70px]">
