@@ -7,9 +7,9 @@ interface PropsTypes {
 
 const Button: FC<PropsTypes> = ({ label, variant }) => {
   const variants = {
-    primary: "bg-dark text-white",
-    secondary: "border-dark border text-black",
-    tertiary: "bg-green text-black",
+    primary: "bg-dark text-white border-none",
+    secondary: "text-black border-dark border",
+    tertiary: "bg-green text-black border-none",
   };
 
   return (
