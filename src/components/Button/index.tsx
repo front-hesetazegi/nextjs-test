@@ -13,7 +13,7 @@ const Button: FC<PropsTypes> = ({ label, variant }) => {
   };
 
   return (
-    <button className={`py-5 px-9 rounded-[14px] ${variants[variant]}`}>
+    <button className={`py-5 px-9 rounded-[14px] w-fit ${variants[variant]}`}>
       {label}
     </button>
   );
