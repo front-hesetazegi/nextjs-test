@@ -1,3 +1,4 @@
+import Header from "@/layouts/Header";
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
@@ -22,6 +23,9 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} antialiased font-[family-name:var(--font-space-grotesk)]`}
       >
+        <div className="p-16 mb-24">
+          <Header />
+        </div>
         {children}
       </body>
     </html>
