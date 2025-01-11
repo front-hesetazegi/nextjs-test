@@ -4,42 +4,48 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export default function Home() {
-  const services = [
+  const services:any = [
     {
       title: "Search Engine Optimization",
       image: "/image/illustration.svg",
       backgroundColor: "gray",
       headingColor: "green",
+      link: "/1",
     },
     {
       title: "Search Engine Optimization",
       image: "/image/illustration.svg",
       backgroundColor: "green",
       headingColor: "white",
+      link: "/2",
     },
     {
       title: "Search Engine Optimization",
       image: "/image/illustration.svg",
       backgroundColor: "dark",
       headingColor: "white",
+      link: "/3",
     },
     {
       title: "Search Engine Optimization",
       image: "/image/illustration.svg",
       backgroundColor: "gray",
       headingColor: "green",
+      link: "/4",
     },
     {
       title: "Search Engine Optimization",
       image: "/image/illustration.svg",
       backgroundColor: "green",
       headingColor: "white",
+      link: "/5",
     },
     {
       title: "Search Engine Optimization",
       image: "/image/illustration.svg",
       backgroundColor: "dark",
       headingColor: "green",
+      link: "/6",
     },
   ];
   return (
@@ -57,13 +63,14 @@ export default function Home() {
         </p>
       </div>
       <div className="grid grid-cols-2 gap-10">
-        {services.map((service, index) => (
+        {services.map((service:any, index:any) => (
           <Link href={`/${index + 1}`} key={index}>
             <Card
               title={service.title}
               image={service.image}
               variant={service.backgroundColor}
               titleVariant={service.headingColor}
+              link={service.link}
             />
           </Link>
         ))}

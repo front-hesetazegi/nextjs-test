@@ -12,7 +12,7 @@ interface CardProps {
 }
 
 function Card({title,link,variant,image,titleVariant}:CardProps) {
-    const variants = {
+    const variants:any= {
         green:"bg-green",
         gray:"bg-gray",
         dark:"bg-dark"
