@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-
 import Link from "next/link";
 import Image from "next/image";
 import Button from "../Button";
@@ -19,7 +18,7 @@ const Header = () => {
         <Link href="/">
           <Image
             src="/image/main-logo.svg"
-            alt="Home logo"
+            alt="Home Logo"
             width={220}
             height={55}
             priority
@@ -31,33 +30,32 @@ const Header = () => {
           onClick={toggleMenu}
         >
           <div
-            className={`w-8 h1 bg-black transition-all duration-300 ease-in-out ${
+            className={`w-8 h-1 bg-black transition-all duration-300 ease-in-out ${
               menuOpen ? "rotate-45 translate-y-2" : ""
             }`}
           ></div>
           <div
-            className={`w-8 h1 bg-black transition-all duration-300 ease-in-out ${
+            className={`w-8 h-1 bg-black transition-all duration-300 ease-in-out ${
               menuOpen ? "opacity-0" : ""
             }`}
           ></div>
           <div
-            className={`w-8 h1 bg-black transition-all duration-300 ease-in-out ${
-              menuOpen ? "-rotate-45 -translate-y-2" : ""
+            className={`w-8 h-1 bg-black transition-all duration-300 ease-in-out ${
+              menuOpen ? "-rotate-45 -translate-y-4" : ""
             }`}
           ></div>
         </button>
 
         <div
-          className={`fixed top-0 right-0 w-full h-full bg-white bg-opacity-90 z-50 transition-transform transform ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
-          } lg:hidden`}
+          className={`fixed top-0 right-0 w-full h-full bg-white bg-opacity-90 z-50 transition-transform transform 
+             ${menuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden`}
         >
           <nav className="flex justify-center items-center h-full">
             <ul className="flex flex-col space-y-6 text-black text-center">
               <li>
                 <Link
                   href="/about-us"
-                  className="hover:text-grey-400"
+                  className="hover:text-gray-400"
                   onClick={() => setMenuOpen(false)}
                 >
                   About Us
@@ -66,7 +64,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/services"
-                  className="hover:text-grey-400"
+                  className="hover:text-gray-400"
                   onClick={() => setMenuOpen(false)}
                 >
                   Services
@@ -75,7 +73,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/use-cases"
-                  className="hover:text-grey-400"
+                  className="hover:text-gray-400"
                   onClick={() => setMenuOpen(false)}
                 >
                   Use Cases
@@ -84,7 +82,7 @@ const Header = () => {
               <li>
                 <Link
                   href="/pricing"
-                  className="hover:text-grey-400"
+                  className="hover:text-gray-400"
                   onClick={() => setMenuOpen(false)}
                 >
                   Pricing
@@ -92,17 +90,17 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/Blog"
-                  className="hover:text-grey-400"
+                  href="/blog"
+                  className="hover:text-gray-400"
                   onClick={() => setMenuOpen(false)}
                 >
-                  blog
+                  Blog
                 </Link>
               </li>
 
               <Button
-                label="Request a quote"
                 variant="secondary"
+                label="Request a quote"
                 onClick={() => setMenuOpen(false)}
               />
             </ul>
@@ -112,32 +110,32 @@ const Header = () => {
         <nav className="hidden lg:flex justify-between items-end w-full">
           <ul className="flex space-x-6 items-center">
             <li>
-              <Link href="/about-us" className="hover:text-grey-400">
+              <Link href="/about-us" className="hover:text-gray-400">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-grey-400">
+              <Link href="/services" className="hover:text-gray-400">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/use-cases" className="hover:text-grey-400">
+              <Link href="/use-cases" className="hover:text-gray-400">
                 Use Cases
               </Link>
             </li>
             <li>
-              <Link href="/pricing" className="hover:text-grey-400">
+              <Link href="/pricing" className="hover:text-gray-400">
                 Pricing
               </Link>
             </li>
             <li>
-              <Link href="/Blog" className="hover:text-grey-400">
-                blog
+              <Link href="/blog" className="hover:text-gray-400">
+                Blog
               </Link>
             </li>
 
-            <Button label="Request a quote" variant="secondary" />
+            <Button variant="secondary" label="Request a quote" />
           </ul>
         </nav>
       </div>
