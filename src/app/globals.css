@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+button div {
+  transition: all 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+ul {
+  list-style-type: none;
+}
+
+.question_more_hide {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out, opacity 0.7s ease-in, margin 0.3s ease-in,
+    padding 0.3s ease-in, background-color 0.3s ease-in;
+}
+
+.question_more_show {
+  height: auto;
+  opacity: 1;
+  transition: height 0.3s ease-in, opacity 0.7s ease-in, margin 0.3s ease-in,
+    padding 0.3s ease-in, background-color 0.3s ease-in;
+  margin-top: 1rem;
+  border-top: 1px solid #000;
+  padding-top: 1rem;
 }
