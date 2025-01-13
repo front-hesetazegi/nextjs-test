@@ -2,14 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* globals.css */
-
-/* Hamburger menu animation */
 button div {
   transition: all 0.3s ease;
 }
 
-/* Full screen menu */
 nav {
   display: flex;
   flex-direction: column;
@@ -21,63 +17,20 @@ ul {
   list-style-type: none;
 }
 
-/* @media (max-width: 1080px) {
-  .nav_container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    min-height: 100%;
-    min-width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .toggle_btn {
-    display: flex;
-  }
-
-  .nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    ul {
-      color: #000;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-  }
+.question_more_hide {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out, opacity 0.7s ease-in, margin 0.3s ease-in,
+    padding 0.3s ease-in, background-color 0.3s ease-in;
 }
 
-@media (width > 1080px) {
-  .nav_container {
-    position: unset !important;
-    display: flex;
-    align-items: center !important;
-    transform: translateX(0) !important;
-  }
-
-  .toggle_btn {
-    display: none;
-  }
-
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      margin: 0;
-      color: #000;
-      align-items: center;
-      gap: 1rem;
-    }
-  }
-} */
+.question_more_show {
+  height: auto;
+  opacity: 1;
+  transition: height 0.3s ease-in, opacity 0.7s ease-in, margin 0.3s ease-in,
+    padding 0.3s ease-in, background-color 0.3s ease-in;
+  margin-top: 1rem;
+  border-top: 1px solid #000;
+  padding-top: 1rem;
+}
